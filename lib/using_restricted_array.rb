@@ -10,9 +10,11 @@ require_relative "restricted_array.rb"
 # Space complexity: O(1)
 def length(array)
   i = 0
+
   until array[i] == nil
     i += 1
   end
+
   return i
 end
 
@@ -22,6 +24,7 @@ end
 def print_array(array)
   len = length(array)
   i = 0
+
   while i < len
     print array[i]
     print " "
@@ -38,6 +41,7 @@ def search(array, length, value_to_find)
   length.times do |i|
     return true if array[i] == value_to_find
   end
+
   return false
 end
 
@@ -47,9 +51,11 @@ end
 # Space complexity: O(1)
 def find_largest(array, length)
   max = array[0]
+
   length.times do |i|
     max = array[i] if array[i] > max
   end
+
   return max
 end
 
@@ -59,9 +65,11 @@ end
 # Space complexity: O(1)
 def find_smallest(array, length)
   min = array[0]
+
   length.times do |i|
     min = array[i] if array[i] < min
   end
+
   return min
 end
 
@@ -71,6 +79,7 @@ end
 def reverse(array, length)
   i = 0
   j = length - 1
+
   while i < j
     temp = array[i]
     array[i] = array[j]
@@ -78,6 +87,7 @@ def reverse(array, length)
     i += 1
     j -= 1
   end
+
   return array
 end
 
@@ -89,6 +99,7 @@ def binary_search(array, length, value_to_find)
   length.times do |i|
     return true if array[i] == value_to_find
   end
+
   return false
 end
 
